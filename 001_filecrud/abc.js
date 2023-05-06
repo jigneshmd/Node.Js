@@ -1,9 +1,10 @@
-const { log } = require("console")
+
 const fs = require("fs")
 const getFileData = (data) => {
     const mydata = JSON.stringify(data)
+
    
-    fs.writeFile('test.json',mydata,(data)=>{
+    fs.writeFile('test.json',mydata,()=>{
         console.log('file write succesfully');
  })
 }

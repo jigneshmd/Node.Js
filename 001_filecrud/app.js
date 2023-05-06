@@ -12,6 +12,7 @@ yargs.command({
         }  
     },
     handler : function (argv){
+        console.log(argv.email);
         const data = {
             name : argv.name,
             email : argv.email
