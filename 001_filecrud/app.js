@@ -1,8 +1,9 @@
 const yargs = require("yargs")
-const fs = require("fs")
-const file1 = require("./abc")
+// const fs = require("fs")
+const file1 = require("./file")
+
 yargs.command({
-    command : "add",
+    command : "add" ,
     builder : {
         name : {
             type : String
@@ -17,8 +18,17 @@ yargs.command({
             name : argv.name,
             email : argv.email
         }
-        console.log(data);
+        // console.log(data);
         file1.getFileData(data)
     }
-})
+}) 
+    yargs.command({
+        command :"view",
+        handler : function(argv){
+            file1.viewFile()
+        }
+    })
+
+
+
 yargs.argv

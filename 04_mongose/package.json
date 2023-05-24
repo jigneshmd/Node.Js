@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "mongoose": "^7.1.1",
+    "mongose": "^0.0.2-security"
+  }
+}
