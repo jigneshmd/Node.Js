@@ -12,7 +12,7 @@ app.use(express.json())
 
 const studentsSchema = new mongoose.Schema({
     name : {
-        type : String
+        type : String,
     },
     email : {
         type : String
