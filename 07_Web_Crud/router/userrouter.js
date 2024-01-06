@@ -28,7 +28,13 @@ router.get("/reg",(req,resp)=>{
 router.post("/do_register",upload.single("file"),async(req,resp)=>{
     // console.log(req.body);
     try {
-        const user = new User({uname : req.body.uname,email : req.body.email,pass : req.body.pass,img : req.file.filename})
+        const user = new User({
+            uname : req.body.uname,
+            email : req.body.email,
+            pass : req.body.pass,
+            img : req.file.filename
+        })
+        
         const udata = await user.save()
         console.log(udata);
         resp.render("reg",{msg : "Registration Successfully Done !!!!"})
@@ -72,7 +78,11 @@ router.get("/edituser",async(req,resp)=>{
 router.post("/do_update",upload.single("file"),async(req,resp)=>{
     try {
         const id = req.body.id
-       const udata = await User.findByIdAndUpdate(id,{uname : req.body.uname,email : req.body.email,pass : req.body.pass,img : req.file.filename})
+       const udata = await User.findByIdAndUpdate(id,{
+        uname : req.body.uname,
+        email : req.body.email,
+        pass : req.body.pass,
+        img : req.file.filename})
        fs.unlinkSync("public/img/"+udata.img)
        resp.redirect("viewuser")
     //    return;

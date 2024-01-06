@@ -1,0 +1,83 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head> 
+<body>
+    <section class="h-100 bg-dark">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card card-registration my-4">
+          <form action="do_update" method="post" enctype="multipart/form-data">
+          <div class="row g-0">
+            <div class="col-xl-6 d-none d-xl-block">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                alt="Sample photo" class="img-fluid"
+                style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+            </div>
+            <div class="col-xl-6">
+              <span class="text-success td-5">{{msg}}</span>
+              <input type="hidden" name="id" value="{{data.id}}">
+              <div class="card-body p-md-5 text-black">
+                <h3 class="mb-5 text-uppercase">Edit Users Detatils</h3>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="form3Example1m" class="form-control form-control-lg" name="Fname" value="{{data.Fname}}"/>
+                      <label class="form-label" for="form3Example1m">First name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="form3Example1n" class="form-control form-control-lg"name="Lname" value="{{data.Lname}}"/>
+                      <label class="form-label" for="form3Example1n">Last name</label>
+                    </div>
+                  </div>
+                </div>
+                 <div class="form-outline mb-4">
+                  <input type="text" id="form3Example8" class="form-control form-control-lg" name="address" value="{{data.address}}"/>
+                  <label class="form-label" for="form3Example8">Address</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="text" id="form3Example99" class="form-control form-control-lg"name="Course" value="{{data.Course}}"/>
+                  <label class="form-label" for="form3Example99">Course</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="email" id="form3Example97" class="form-control form-control-lg"name="Emailid" value="{{data.Emailid}}"/>
+                  <label class="form-label" for="form3Example97">Email ID</label>
+                </div>
+
+                 <div class="form-outline mb-4">
+                  <input type="password" id="form3Example9" class="form-control form-control-lg" name="Password"/>
+                  <label class="form-label" for="form3Example9">Password</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="file" id="form3Example9" class="form-control form-control-lg" name="file"/>
+                  <label class="form-label" for="form3Example9">Students Profile Image</label>
+                </div>  
+                
+                <div class="d-flex justify-content-end pt-3">
+                  <button type="Submit" class="btn btn-warning btn-lg ms-2">Update</button>             
+                </div>
+              </div>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
